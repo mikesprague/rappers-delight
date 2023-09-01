@@ -12,14 +12,13 @@ NOTE: currently NOT published to npm or GH Packages
 git clone https://github.com/mikesprague/rappers-delight
 cd rappers-delight
 npm install -g .
+# optionally run `npm install` to install this projects dev dependencies if desired
 
-rappers-delight # just play benny hill
+rappers-delight # just play rapper's delight
 rappers-delight sleep 10 # play for 10 s
 rappers-delight make # when compiling
-rappers-delight npm install -g dat # installing node modules
+rappers-delight npm install # while installing node modules
 ```
-
-NOTE: optionally run `npm install` to install dev dependencies if desired
 
 ### Linux users
 
