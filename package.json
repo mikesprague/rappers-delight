@@ -1,0 +1,87 @@
+{
+  "name": "rappers-delight",
+  "version": "1.0.0",
+  "description": "Play Sugar Hill Gang's song Rapper's Delight while running another command",
+  "type": "module",
+  "bin": {
+    "rappers-delight": "./src/index.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.11",
+    "@babel/eslint-plugin": "^7.22.10",
+    "@babel/preset-env": "^7.22.14",
+    "cz-git": "^1.7.1",
+    "eslint": "^8.48.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-compat": "^4.2.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-security": "^1.7.1",
+    "prettier": "^3.0.3",
+    "prettier-eslint": "^15.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikesprague/rappers-delight.git"
+  },
+  "author": "Michael Sprague (@mikesprague)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikesprague/rappers-delight/issues"
+  },
+  "homepage": "https://github.com/mikesprague/rappers-delight",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "settings": {
+      "jest": {
+        "version": 28
+      }
+    },
+    "env": {
+      "browser": false,
+      "es6": true,
+      "node": true,
+      "commonjs": false
+    },
+    "extends": [
+      "airbnb",
+      "prettier",
+      "stylelint"
+    ],
+    "plugins": [
+      "compat",
+      "import",
+      "markdown",
+      "prettier",
+      "security"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 11,
+      "parser": "babel-parser",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "tabwidth": true,
+    "trailingComma": "all"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  }
+}
