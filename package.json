@@ -2,13 +2,29 @@
   "name": "rappers-delight",
   "version": "1.0.0",
   "description": "Play Sugar Hill Gang's song Rapper's Delight while running another command",
+  "private": true,
+  "engines": {
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
+  },
   "type": "module",
   "bin": {
     "rappers-delight": "./src/index.js"
   },
-  "exports": {
-    ".": "./src/index.js"
+  "main": "./src/index.js",
+  "repository": {
+    "url": "https://github.com/mikesprague/rappers-delight"
   },
+  "keywords": [],
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikesprague/rappers-delight/issues"
+  },
+  "homepage": "https://mikesprague.github.io/rappers-delight",
   "dependencies": {},
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.11",
@@ -26,27 +42,12 @@
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mikesprague/rappers-delight.git"
-  },
-  "author": "Michael Sprague (@mikesprague)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mikesprague/rappers-delight/issues"
-  },
-  "homepage": "https://github.com/mikesprague/rappers-delight",
   "babel": {
     "presets": [
       "@babel/preset-env"
     ]
   },
   "eslintConfig": {
-    "settings": {
-      "jest": {
-        "version": 28
-      }
-    },
     "env": {
       "browser": false,
       "es6": true,
