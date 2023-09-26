@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
+import childProcess from 'node:child_process';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import childProcess from 'node:child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const FILENAME = path.join(__dirname, 'song.mp3');
@@ -37,19 +37,15 @@ const has = (cmd) => {
 let bin = 'play';
 let args = [FILENAME];
 
-if (process.platform == 'darwin') {
+if (process.platform === 'darwin') {
   bin = 'afplay';
 }
 
-if (process.platform == 'win32') {
+if (process.platform === 'win32') {
   bin = 'powershell';
   args = [
     '-c',
-    'Add-Type -AssemblyName PresentationCore; ' +
-      '$MediaPlayer = New-Object System.Windows.Media.Mediaplayer; ' +
-      `$MediaPlayer.Open("${FILENAME}"); ` +
-      '$MediaPlayer.Play(); ' +
-      'Start-Sleep 273',
+    `Add-Type -AssemblyName PresentationCore; $MediaPlayer = New-Object System.Windows.Media.Mediaplayer; $MediaPlayer.Open("${FILENAME}"); $MediaPlayer.Play(); Start-Sleep 273`,
   ];
 }
 
